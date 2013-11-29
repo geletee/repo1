@@ -1,0 +1,22 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                        controllers.Application.index()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+
+# Usuario
+POST     /usuario           	 controllers.Usuarios.create()
+GET      /usuarios               controllers.Usuarios.index()
+GET      /usuario/:id            controllers.Usuarios.retrieve(id: Long)
+PUT      /usuario/:id            controllers.Usuarios.update(id: Long)
+DELETE   /usuario/:id       	 controllers.Usuarios.delete(id: Long)
+GET      /userdata/:nick         controllers.Usuarios.userData(nick: String)
+GET      /userfavs/:nick         controllers.Usuarios.userFavs(nick: String)
+
+# Favoritos
+POST     /favorito/:id       	 controllers.Favoritos.create(id: Long)

@@ -1,0 +1,5 @@
+@(fav: Favorito)
+{
+	"id": "@fav.id",
+	"direccion": "@fav.direccion"
+}

@@ -1,0 +1,6 @@
+@(favs: List[Favorito])
+[
+@for(f <- favs) {
+	@_favorito(f)
+}
+]
